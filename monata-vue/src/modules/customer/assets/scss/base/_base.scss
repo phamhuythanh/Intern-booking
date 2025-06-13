@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+  color: $text-color-white;
+  vertical-align: middle;
+  font-weight: $fw-400;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 20px auto 20px auto;
+  padding: 10px 10px;
+  box-sizing: border-box;
+
+  @include responsive(tablet) {
+    width: 100%;
+    margin: 20px auto 20px auto;
+    padding: 10px 10px;
+    box-sizing: border-box;
+  }
+
+  @include responsive(pc) {
+    width: 1140px;
+  }
+}
+
+.text-decor-none {
+  text-decoration: none;
+}
+
+.btn-learn-more {
+  color: $text-color-gray-light;
+  font-size: $fs-16;
+  line-height: $lh-24;
+  vertical-align: middle;
+}
+
+.blue {
+  color: $color-blue;
+}
+
+.gray {
+  color: $text-color-gray;
+}
+
+.black {
+  color: $color-black;
+}
+
+.gray-dark {
+  color: $text-color-gray-light;
+}
+
+.active-under {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.group-icon {
+  width: 160px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-primary:hover {
+  background-color: $color-white;
+  color: $text-color-blue;
+}
+
+.icon {
+  background-color: rgba($color: $color-white, $alpha: 0.9);
+  width: 21px;
+  height: 21px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.boxed-btn {
+  background: #fff;
+  color: #131313;
+  display: inline-block;
+  padding: 18px 44px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  border: 1px solid #009DFF;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #009DFF !important;
+  text-transform: uppercase;
+  cursor: pointer;
+}

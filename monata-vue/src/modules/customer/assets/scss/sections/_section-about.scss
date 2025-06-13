@@ -1,0 +1,63 @@
+.section-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+
+  @include responsive(tablet) {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+  }
+
+  @include responsive(pc) {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+  }
+
+  .section-about-start {
+    padding: 5px;
+
+    .section-about-title {
+      font-size: $fs-14;
+      line-height: $lh-21;
+    }
+
+    .section-about-heading {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: $fs-36;
+      line-height: $lh-42;
+      font-weight: $fw-400;
+
+      @include responsive(pc) {
+        font-size: $fs-46;
+        line-height: $lh-56;
+      }
+    }
+
+    .section-about-text {
+      font-size: $fs-16;
+      line-height: $lh-28;
+      font-weight: 300;
+    }
+  }
+
+  .section-about-end {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+
+    .about-item {
+      box-sizing: border-box;
+
+      .item-img {
+        width: 100%;
+      }
+
+      .item-img-bot {
+        margin-top: 50px;
+      }
+    }
+  }
+}

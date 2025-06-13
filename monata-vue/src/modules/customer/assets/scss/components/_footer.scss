@@ -1,0 +1,109 @@
+footer {
+  height: 856.78px;
+  padding: 100px 39px 0px 39px;
+  display: grid;
+  grid-template-rows: 85% 15%;
+  background-color: $color-black;
+
+  @include responsive(tablet) {
+    height: 450px;
+    grid-template-rows: 4fr 1fr;
+    justify-content: center;
+    background-color: $color-black;
+  }
+
+  @include responsive(pc) {
+    height: 450px;
+    grid-template-rows: 4fr 1fr;
+    justify-content: center;
+    background-color: $color-black;
+  }
+
+  .footer-items {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+
+    @include responsive(tablet) {
+      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+    }
+
+    @include responsive(pc) {
+      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-heading {
+      margin-bottom: 30px;
+      font-size: $fs-22;
+      line-height: $lh-26;
+      font-weight: $fw-400;
+      color: $text-color-white;
+    }
+
+    .footer-text {
+      margin: 0;
+      font-size: $fs-16;
+      line-height: $lh-28;
+      color: $color-gray-light;
+    }
+
+    .footer-link {
+      margin-top: 300px;
+    }
+
+    .footer-list {
+      padding: 0;
+      list-style-type: none;
+
+      .footer-list-item {
+        margin-bottom: 10px;
+        color: $color-gray-light;
+      }
+    }
+
+    .form-signup {
+      width: 80%;
+      height: 45px;
+      display: grid;
+      grid-template-columns: 65% 35%;
+      margin-bottom: 20px;
+
+      .form-signup-input {
+        padding-left: 20px;
+        box-sizing: border-box;
+        border: unset;
+      }
+
+      .form-signup-button {
+        border: unset;
+        color: $text-color-white;
+        background-color: $color-blue;
+
+        &:hover {
+          color: $color-blue;
+          background-color: $text-color-white;
+          outline: 3px solid $color-blue;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $text-color-gray-light;
+
+    @include responsive(tablet) {
+      height: 100px;
+    }
+
+    @include responsive(pc) {
+      height: 100px;
+    }
+  }
+}

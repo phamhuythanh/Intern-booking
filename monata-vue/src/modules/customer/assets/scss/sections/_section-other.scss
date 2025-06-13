@@ -1,0 +1,16 @@
+.section-other {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include responsive(table) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include responsive(pc) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .section-other-img {
+    width: 100%;
+  }
+}

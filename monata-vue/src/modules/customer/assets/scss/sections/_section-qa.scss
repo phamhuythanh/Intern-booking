@@ -1,0 +1,35 @@
+.section-qa {
+  display: flex;
+  justify-content: center;
+
+  .section-qa-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 131px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: 1px solid $color-gray-light;
+
+    .section-qa-text {
+      font-size: $fs-30;
+      line-height: $lh-28;
+      vertical-align: middle;
+    }
+
+    .section-qa-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 248px;
+      height: 53px;
+      font-size: $fs-18;
+      line-height: $lh-27;
+      vertical-align: middle;
+      background-color: $color-blue;
+      color: $text-color-white;
+      border-radius: 26px;
+    }
+  }
+}

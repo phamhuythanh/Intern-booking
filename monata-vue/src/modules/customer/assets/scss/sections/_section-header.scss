@@ -1,0 +1,326 @@
+.section-header {
+  background-size: cover;
+  width: 100%;
+
+  .text-overlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+
+    .text-overlay-heading {
+      margin: 0;
+      font-size: $fs-30;
+      line-height: $lh-36;
+      letter-spacing: 2px;
+      color: $text-color-white;
+
+      @include responsive(tablet) {
+        font-size: $fs-100;
+        line-height: $lh-120;
+        letter-spacing: 2px;
+        font-weight: $fw-400;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      @include responsive(pc) {
+        font-size: $fs-100;
+        line-height: $lh-120;
+        letter-spacing: 2px;
+        font-weight: $fw-400;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+
+    .text-overlay-p {
+      margin: 0;
+      font-size: $fs-24;
+      line-height: $lh-28;
+      letter-spacing: 0%;
+      font-weight: $fw-400;
+      vertical-align: middle;
+      text-align: center;
+      color: $text-color-white;
+      @include responsive(pc) {
+        line-height: $lh-18;
+      }
+    }
+  }
+
+  .menu-toogle-hide {
+    display: none;
+  }
+
+  .menu-toogle-display {
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    padding: 20px 0 10px 20px;
+    background-color: rgba($color: $color-white, $alpha: 0.3);
+    z-index: 2;
+    .menu-toogle-list {
+      list-style-type: none;
+      .menu-toogle-item {
+        margin-bottom: 50px;
+        font-size: $fs-30;
+        .menu-toogle-item-link {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    @include responsive(pc) {
+      display: grid;
+      grid-template-columns: 4fr 2fr 4fr;
+      justify-content: space-between;
+      padding-top: 57px;
+      padding-left: 150px;
+      padding-right: 150px;
+      z-index: 1;
+    }
+
+    .nav-start {
+      display: none;
+
+      .nav-item {
+        margin-left: 20px;
+        color: $text-color-white;
+      }
+
+      @include responsive(pc) {
+        display: flex;
+        margin-top: 20px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-icon-display {
+      display: block;
+      width: 41px;
+      height: 27px;
+      margin-right: 20px;
+
+      @include responsive(pc) {
+        display: none;
+      }
+    }
+
+    .menu-icon-hide {
+      display: none;
+      width: 41px;
+      height: 27px;
+      margin-right: 20px;
+
+      @include responsive(pc) {
+        display: none;
+      }
+    }
+
+    .nav-end {
+      display: none;
+      align-items: center;
+
+      @include responsive(pc) {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav-booking {
+        width: 142px;
+        height: 42px;
+        margin-left: 40px;
+        margin-right: 40px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-blue;
+        color: $text-color-white;
+        border: unset;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+
+        @include responsive(pc) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.section-header_1 {
+  background-image: url('../../assets/img/slide/slide1.png');
+  height: 1536px;
+
+  @include responsive(pc) {
+    height: 1200px;
+  }
+
+  .text-overlay {
+    height: 1000px;
+  }
+}
+
+.section-header_2 {
+  background-image: url('../../assets/img/slide/slider-img-1.png');
+  height: 500px;
+
+  .text-overlay {
+    .text-overlay-heading {
+      font-size: $fs-60;
+    }
+  }
+}
+
+.section-header_3 {
+  background-image: url('../../assets/img/slide/slider-img-2.png');
+  height: 500px;
+
+  .text-overlay {
+    .text-overlay-heading {
+      font-size: $fs-60;
+    }
+  }
+}
+
+.section-header_4 {
+  height: 150px;
+  background-color: $color-black;
+  display: flex;
+  justify-content: center;
+
+  .nav-bar {
+    padding: 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: 100px;
+    }
+
+    @include responsive(pc) {
+      width: 1440px;
+    }
+  }
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  display: block;
+
+  #nav-mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    padding-top: 30px;
+
+    .menu-close {
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      font-size: $fs-24;
+      color: $color-white;
+      cursor: pointer;
+      z-index: 1002;
+
+      @include responsive(sp) {
+        top: 30px;
+      }
+    }
+
+    .nav-mobile {
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+        font-size: $fs-18;
+        display: block;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+
+    .nav-mobile-home {
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+        font-size: $fs-18;
+        display: block;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &.active {
+    right: 0;
+    display: block;
+
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  }
+}
+
+.menu-toggle {
+  cursor: pointer;
+  z-index: 1001;
+  color: $color-white;
+  font-size: $fs-24;
+  padding: 10px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
